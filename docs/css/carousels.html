@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Carousels | cuz</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/codemirror.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/cuz.css">
+  <link rel="stylesheet" href="/css/docs.css">
+
+  <!--[if lte IE 8]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/es5-shim.min.js"></script>
+  <script src="/js/es5-sham.min.js"></script>
+  <![endif]-->
+  <script src="/js/codemirror.js"></script>
+  <!-- <script src="/js/react-dom.js"></script> -->
+  <script src="/js/JSXTransformer.js"></script>
+  <script src="/js/cuz.js"></script>
+  <script>
+    React = cuz.React;
+    ReactDOM = cuz.ReactDOM;
+  </script>
+  <script src="/js/babel-browser.min.js"></script>
+  <script src="/js/live_editor.js"></script>
+</head>
+<body>
+
+  <div class="docs-container">
+
+    <div class="nav-main">
+      <div class="wrap">
+        <a class="nav-home" href="/index.html">
+          <span class="nav-logo fa fa-diamond" width="36" height="36"></span>
+          cuz
+        </a>
+        <ul class="nav-site nav-site-internal">
+          <ligetting-started/><a href="/docs/getting-started/quick-start.html">指南</a></li>
+          <li>
+            <a href="/docs/css" class="active">
+              <i class="fa fa-fw fa-puzzle-piece"></i>
+              cuz-ui
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-magic"></i>
+              cuz-theme
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-terminal"></i>
+              cuz-cli
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-bar-chart"></i>
+              cuz-charts
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              支持
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav-site nav-site-external">
+          <li>
+            <a href="https://github.com/cuzjs/cuz">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <section class="content wrap documentationContent">
+  <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <h3>基本组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/index.html">简介</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/grid.html">Grid</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/label.html">Label</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/tab.html">Tab</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/breadcrumb.html">Breadcrumb</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/alert.html">Alert</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/tip.html">Tip</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/box.html">Box</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/table.html">Table</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/pagination.html">Pagination</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/code.html">Code</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/modal.html">Modal</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/carousels.html" class="active">Carousels</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>表单组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/button.html">Button</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/input.html">Input</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>高级组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/calendar.html">Calendar</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+
+
+  <div class="inner-content">
+    <h1>
+      Carousels
+    </h1>
+    <div class="subHeader"></div>
+
+    <hr>
+<h2><a class="anchor" name="uncontrolled-carousels"></a>Uncontrolled Carousels <a class="hash-link" href="#uncontrolled-carousels">#</a></h2>
+<hr>
+
+<p>允许组件自我控制状态.</p>
+
+<div class="">
+  <div id="carousels-default"></div>
+</div>
+<h2><a class="anchor" name="controlled-carousels"></a>Controlled Carousels <a class="hash-link" href="#controlled-carousels">#</a></h2>
+<hr>
+
+<div class="">
+  <div id="carousels-controlled"></div>
+</div>
+<h3><a class="anchor" name="props"></a>Props <a class="hash-link" href="#props">#</a></h3><h4><a class="anchor" name="carousel"></a>Carousel <a class="hash-link" href="#carousel">#</a></h4>
+<table><thead>
+<tr>
+<th style="text-align: left">名称</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: right">缺省值</th>
+<th style="text-align: right">描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">activeIndex</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">controls</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">defaultActiveIndex</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">direction</td>
+<td style="text-align: center">以下之一:<code>&#39;prev&#39;</code>,<code>&#39;next&#39;</code></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">indicators</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">interval</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right">5000</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">nextIcon</td>
+<td style="text-align: center">node</td>
+<td style="text-align: right"><Glyphicon glyph="chevron-right" /></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">onSelect</td>
+<td style="text-align: center">function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">onSlideEnd</td>
+<td style="text-align: center">function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">pauseOnHover</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">prevIcon</td>
+<td style="text-align: center">node</td>
+<td style="text-align: right"><Glyphicon glyph="chevron-left" /></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">slide</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">wrap</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right"></td>
+</tr>
+</tbody></table>
+<h4><a class="anchor" name="carouselitem"></a>CarouselItem <a class="hash-link" href="#carouselitem">#</a></h4>
+<table><thead>
+<tr>
+<th style="text-align: left">名称</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: right">缺省值</th>
+<th style="text-align: right">描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">active</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">false</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">animateIn</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">false</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">animateOut</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">false</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">caption</td>
+<td style="text-align: center">node</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">direction</td>
+<td style="text-align: center">以下之一:<code>&#39;prev&#39;</code> , <code>&#39;next&#39;</code></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">index</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">onAnimateOutEnd</td>
+<td style="text-align: center">function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+</tbody></table>
+<h3><a class="anchor" name=""></a>组件参考 <a class="hash-link" href="#">#</a></h3>
+<hr>
+
+<p>React-Bootstrap官方文档: <a href="http://react-bootstrap.github.io/components.html#carousels">http://react-bootstrap.github.io/components.html#carousels</a></p>
+
+<script src="/js/components/carousels/carousels.js"></script>
+
+<script src="/js/components/carousels/carousels-controlled.js"></script>
+
+
+    <div class="docs-prevnext">
+      
+        <a class="docs-prev" href="/docs/css/select.html">&larr; Prev</a>
+      
+      
+        <a class="docs-next" href="/docs/css/code.html">Next &rarr;</a>
+      
+    </div>
+  </div>
+</section>
+
+
+    <footer class="wrap">
+      <div class="left">
+        <a href="https://github.com/cuzjs/cuz">GitHub</a>
+      </div>
+      <div class="right">
+        &copy; 2015 阿里巴巴 数据技术及产品部
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Table | cuz</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/codemirror.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/cuz.css">
+  <link rel="stylesheet" href="/css/docs.css">
+
+  <!--[if lte IE 8]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/es5-shim.min.js"></script>
+  <script src="/js/es5-sham.min.js"></script>
+  <![endif]-->
+  <script src="/js/codemirror.js"></script>
+  <!-- <script src="/js/react-dom.js"></script> -->
+  <script src="/js/JSXTransformer.js"></script>
+  <script src="/js/cuz.js"></script>
+  <script>
+    React = cuz.React;
+    ReactDOM = cuz.ReactDOM;
+  </script>
+  <script src="/js/babel-browser.min.js"></script>
+  <script src="/js/live_editor.js"></script>
+</head>
+<body>
+
+  <div class="docs-container">
+
+    <div class="nav-main">
+      <div class="wrap">
+        <a class="nav-home" href="/index.html">
+          <span class="nav-logo fa fa-diamond" width="36" height="36"></span>
+          cuz
+        </a>
+        <ul class="nav-site nav-site-internal">
+          <ligetting-started/><a href="/docs/getting-started/quick-start.html">指南</a></li>
+          <li>
+            <a href="/docs/css" class="active">
+              <i class="fa fa-fw fa-puzzle-piece"></i>
+              cuz-ui
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-magic"></i>
+              cuz-theme
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-terminal"></i>
+              cuz-cli
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-bar-chart"></i>
+              cuz-charts
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              支持
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav-site nav-site-external">
+          <li>
+            <a href="https://github.com/cuzjs/cuz">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <section class="content wrap documentationContent">
+  <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <h3>基本组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/index.html">简介</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/grid.html">Grid</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/label.html">Label</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/tab.html">Tab</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/breadcrumb.html">Breadcrumb</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/alert.html">Alert</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/tip.html">Tip</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/box.html">Box</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/table.html" class="active">Table</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/pagination.html">Pagination</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/code.html">Code</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/modal.html">Modal</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/carousels.html">Carousels</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>表单组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/button.html">Button</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/input.html">Input</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>高级组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/calendar.html">Calendar</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+
+
+  <div class="inner-content">
+    <h1>
+      Table
+    </h1>
+    <div class="subHeader"></div>
+
+    <hr>
+<h2><a class="anchor" name="table"></a>Table <a class="hash-link" href="#table">#</a></h2>
+<hr>
+
+<p>一个基础的 Table 示例。</p>
+
+<div class="">
+  <div id="table-default"></div>
+</div>
+<h2><a class="anchor" name="table"></a>Table <a class="hash-link" href="#table">#</a></h2>
+<hr>
+
+<p>带排序接口的 Table。</p>
+
+<div class="">
+  <div id="table-sort"></div>
+</div>
+<h3><a class="anchor" name="props"></a>Props <a class="hash-link" href="#props">#</a></h3><h4><a class="anchor" name="table"></a>Table <a class="hash-link" href="#table">#</a></h4>
+<table><thead>
+<tr>
+<th style="text-align: left">名称</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: right">缺省值</th>
+<th style="text-align: right">描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">width (<code>required</code>)</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">表格的宽度(px)</td>
+</tr>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">表格的高度(px)</td>
+</tr>
+<tr>
+<td style="text-align: left">maxHeight</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">表格的最大高度。<code>height</code> 和 <code>maxHeight</code>两者必须要有一个存在</td>
+</tr>
+<tr>
+<td style="text-align: left">rowsCount (<code>required</code>)</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">表格的行数</td>
+</tr>
+<tr>
+<td style="text-align: left">rowHeight</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">表格每行的高度(px)</td>
+</tr>
+<tr>
+<td style="text-align: left">defaultSortColumn</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">表格初始化时，使用那一列的关键字进行排序</td>
+</tr>
+<tr>
+<td style="text-align: left">defaultSortType</td>
+<td style="text-align: center">以下之一：<code>&quot;asc&quot;</code>、<code>&quot;desc&quot;</code></td>
+<td style="text-align: right">&quot;desc&quot;</td>
+<td style="text-align: right">初始化时排序的方式</td>
+</tr>
+<tr>
+<td style="text-align: left">onSortChange</td>
+<td style="text-align: center">function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">点击排序按钮的时候触发的事件</td>
+</tr>
+<tr>
+<td style="text-align: left">overflowX</td>
+<td style="text-align: center">以下之一：<code>&quot;hidden&quot;</code>、<code>&quot;auto&quot;</code></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">overflowY</td>
+<td style="text-align: center">以下之一：<code>&quot;hidden&quot;</code>、<code>&quot;auto&quot;</code></td>
+<td style="text-align: right"></td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">headerHeight (<code>required</code>)</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right">0</td>
+<td style="text-align: right">表头行的高度(px)</td>
+</tr>
+<tr>
+<td style="text-align: left">footerHeight</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right">0</td>
+<td style="text-align: right">表格 footer 的高度(px)</td>
+</tr>
+</tbody></table>
+<h4><a class="anchor" name="column"></a>Column <a class="hash-link" href="#column">#</a></h4>
+<table><thead>
+<tr>
+<th style="text-align: left">名称</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: right">缺省值</th>
+<th style="text-align: right">描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">columnKey</td>
+<td style="text-align: center">string 或 number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该列的关键词</td>
+</tr>
+<tr>
+<td style="text-align: left">align</td>
+<td style="text-align: center">以下之一：<code>&quot;left&quot;</code>、<code>center</code>、<code>right</code></td>
+<td style="text-align: right">&quot;left&quot;</td>
+<td style="text-align: right">对齐方式</td>
+</tr>
+<tr>
+<td style="text-align: left">fixed</td>
+<td style="text-align: center">boolean</td>
+<td style="text-align: right">false</td>
+<td style="text-align: right"></td>
+</tr>
+<tr>
+<td style="text-align: left">header</td>
+<td style="text-align: center">node 或 function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">存放该列表头元素</td>
+</tr>
+<tr>
+<td style="text-align: left">cell</td>
+<td style="text-align: center">node 或 function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该列表格主体部分元素</td>
+</tr>
+<tr>
+<td style="text-align: left">footer</td>
+<td style="text-align: center">node 或 function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该列 footer 部分元素</td>
+</tr>
+<tr>
+<td style="text-align: left">columnKey</td>
+<td style="text-align: center">string 或 function</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">表示该列得关键字</td>
+</tr>
+<tr>
+<td style="text-align: left">width (<code>required</code>)</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该列的宽度(px)</td>
+</tr>
+<tr>
+<td style="text-align: left">minWidth (<code>required</code>)</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该列的最小宽度(px)</td>
+</tr>
+<tr>
+<td style="text-align: left">maxWidth</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该列得最大宽度(px)</td>
+</tr>
+</tbody></table>
+<h4><a class="anchor" name="cell"></a>Cell <a class="hash-link" href="#cell">#</a></h4>
+<table><thead>
+<tr>
+<th style="text-align: left">名称</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: right">缺省值</th>
+<th style="text-align: right">描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">height</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该 cell 的高度</td>
+</tr>
+<tr>
+<td style="text-align: left">width</td>
+<td style="text-align: center">number</td>
+<td style="text-align: right"></td>
+<td style="text-align: right">该 cell 的宽度</td>
+</tr>
+</tbody></table>
+<h3><a class="anchor" name=""></a>组件参考 <a class="hash-link" href="#">#</a></h3>
+<hr>
+
+<p>FixedDataTable 官方文档: <a href="https://facebook.github.io/fixed-data-table/">https://facebook.github.io/fixed-data-table/</a></p>
+
+<script src="/js/components/table/table.js"></script>
+
+<script src="/js/components/table/table-sort.js"></script>
+
+
+    <div class="docs-prevnext">
+      
+        <a class="docs-prev" href="/docs/css/pagination.html">&larr; Prev</a>
+      
+      
+        <a class="docs-next" href="/docs/css/select.html">Next &rarr;</a>
+      
+    </div>
+  </div>
+</section>
+
+
+    <footer class="wrap">
+      <div class="left">
+        <a href="https://github.com/cuzjs/cuz">GitHub</a>
+      </div>
+      <div class="right">
+        &copy; 2015 阿里巴巴 数据技术及产品部
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

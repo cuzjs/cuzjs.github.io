@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Select | cuz</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/codemirror.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/cuz.css">
+  <link rel="stylesheet" href="/css/docs.css">
+
+  <!--[if lte IE 8]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/es5-shim.min.js"></script>
+  <script src="/js/es5-sham.min.js"></script>
+  <![endif]-->
+  <script src="/js/codemirror.js"></script>
+  <!-- <script src="/js/react-dom.js"></script> -->
+  <script src="/js/JSXTransformer.js"></script>
+  <script src="/js/cuz.js"></script>
+  <script>
+    React = cuz.React;
+    ReactDOM = cuz.ReactDOM;
+  </script>
+  <script src="/js/babel-browser.min.js"></script>
+  <script src="/js/live_editor.js"></script>
+</head>
+<body>
+
+  <div class="docs-container">
+
+    <div class="nav-main">
+      <div class="wrap">
+        <a class="nav-home" href="/index.html">
+          <span class="nav-logo fa fa-diamond" width="36" height="36"></span>
+          cuz
+        </a>
+        <ul class="nav-site nav-site-internal">
+          <ligetting-started/><a href="/docs/getting-started/quick-start.html">指南</a></li>
+          <li>
+            <a href="/docs/css" class="active">
+              <i class="fa fa-fw fa-puzzle-piece"></i>
+              cuz-ui
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-magic"></i>
+              cuz-theme
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-terminal"></i>
+              cuz-cli
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-fw fa-bar-chart"></i>
+              cuz-charts
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              支持
+            </a>
+          </li>
+        </ul>
+
+        <ul class="nav-site nav-site-external">
+          <li>
+            <a href="https://github.com/cuzjs/cuz">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <section class="content wrap documentationContent">
+  <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <h3>基本组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/index.html">简介</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/grid.html">Grid</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/label.html">Label</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/tab.html">Tab</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/breadcrumb.html">Breadcrumb</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/alert.html">Alert</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/tip.html">Tip</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/box.html">Box</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/table.html">Table</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/pagination.html">Pagination</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/code.html">Code</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/modal.html">Modal</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/carousels.html">Carousels</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>表单组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/button.html">Button</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/css/input.html">Input</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>高级组件</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/css/calendar.html">Calendar</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+
+
+  <div class="inner-content">
+    <h1>
+      Select
+    </h1>
+    <div class="subHeader"></div>
+
+    <hr>
+<h2><a class="anchor" name="-select-"></a>一个基本的 Select 示例 <a class="hash-link" href="#-select-">#</a></h2>
+<hr>
+
+<p>你可以使用 <code>&lt;Select /&gt;</code> 标签快速生成一个下拉选项框.你需要提供一个对象数组作为下拉选项的数据源,对象数组中每个对象序号包含 <code>value</code> 和 <code>label</code> 值.</p>
+
+<div class="">
+  <div id="select-default"></div>
+</div>
+<h2><a class="anchor" name="select-"></a>Select 的不同状态 <a class="hash-link" href="#select-">#</a></h2>
+<hr>
+
+<div class="">
+  <div id="select-states"></div>
+</div>
+<h2><a class="anchor" name="-select"></a>可以多选的 Select <a class="hash-link" href="#-select">#</a></h2>
+<hr>
+
+<p>在 <code>&lt;Select /&gt;</code> 标签中添加 <code>multi</code> 属性可以使 Select 多选.</p>
+
+<div class="">
+  <div id="select-multi"></div>
+</div>
+<h2><a class="anchor" name="-options--select"></a>异步加载 Options 的 Select <a class="hash-link" href="#-options--select">#</a></h2>
+<hr>
+
+<p>如果需要异步加载 options ,需要使用 <code>asyncOptions</code> 函数来代替 <code>Array</code> 填充数组.</p>
+
+<p><code>asyncOptions</code> 函数含有两个参数 <code>String input</code>, <code>Function callback</code> .当输入框的文本内容改变时 <code>Function callback</code> 会被回调.</p>
+
+<div class="">
+  <div id="select-async"></div>
+</div>
+<h3><a class="anchor" name="props"></a>Props <a class="hash-link" href="#props">#</a></h3>
+<table><thead>
+<tr>
+<th style="text-align: left">名称</th>
+<th style="text-align: center">类型</th>
+<th style="text-align: right">缺省值</th>
+<th style="text-align: right">描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">addLabelText</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;Add &quot;{label}&quot;?&#39;</td>
+<td style="text-align: right">配合 <code>allowCreate</code> 使用的显示文本</td>
+</tr>
+<tr>
+<td style="text-align: left">allowCreate</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">false</td>
+<td style="text-align: right">在可多选的 Select 下,允许新建一个选项(当输入一个不在 <code>options</code>数组中的字段的时候,下方会显示 <code>addLabelText</code> 属性的内容以提示添加这个 item)</td>
+</tr>
+<tr>
+<td style="text-align: left">asyncOptions</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">获取下拉选项填充数组的回调函数,用于异步加载</td>
+</tr>
+<tr>
+<td style="text-align: left">autoload</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right">是否让异步加载的 options 自动加载</td>
+</tr>
+<tr>
+<td style="text-align: left">backspaceRemoves</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right">是否允许使用键盘上 backspace 按键来删除已经选中的项</td>
+</tr>
+<tr>
+<td style="text-align: left">cacheAsyncResults</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right">enables the options cache for <code>asyncOptions</code> (default: <code>true</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left">clearable</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right">should it be possible to reset value</td>
+</tr>
+<tr>
+<td style="text-align: left">clearAllText</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;Clear all&#39;</td>
+<td style="text-align: right">title for the &quot;clear&quot; control when <code>multi</code> is true</td>
+</tr>
+<tr>
+<td style="text-align: left">clearValueText</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;Clear value&#39;</td>
+<td style="text-align: right">title for the &quot;clear&quot; control</td>
+</tr>
+<tr>
+<td style="text-align: left">delimiter</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;,&#39;</td>
+<td style="text-align: right">delimiter to use to join multiple values</td>
+</tr>
+<tr>
+<td style="text-align: left">disabled</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">false</td>
+<td style="text-align: right">当为 true 的时候 组件不可用</td>
+</tr>
+<tr>
+<td style="text-align: left">filterOption</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">method to filter a single option: <code>function(option, filterString)</code></td>
+</tr>
+<tr>
+<td style="text-align: left">filterOptions</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">method to filter the options array: <code>function([options], filterString, [values])</code></td>
+</tr>
+<tr>
+<td style="text-align: left">ignoreCase</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right">whether to perform case-insensitive filtering</td>
+</tr>
+<tr>
+<td style="text-align: left">inputProps</td>
+<td style="text-align: center">object</td>
+<td style="text-align: right">{}</td>
+<td style="text-align: right">custom attributes for the Input (in the Select-control) e.g: <code>{&#39;data-foo&#39;: &#39;bar&#39;}</code></td>
+</tr>
+<tr>
+<td style="text-align: left">isLoading</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">false</td>
+<td style="text-align: right">当为 <code>true</code> 时,显示一个 loading 的加载圈(比如在异步加载 options 时)</td>
+</tr>
+<tr>
+<td style="text-align: left">labelKey</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;label&#39;</td>
+<td style="text-align: right">the option property to use for the label</td>
+</tr>
+<tr>
+<td style="text-align: left">matchPos</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;any&#39;</td>
+<td style="text-align: right">(any, start) match the start or entire string when filtering</td>
+</tr>
+<tr>
+<td style="text-align: left">matchProp</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;any&#39;</td>
+<td style="text-align: right">(any, label, value) which option property to filter on</td>
+</tr>
+<tr>
+<td style="text-align: left">multi</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">下拉选项可以多选</td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">field name, for hidden <code>&lt;input /&gt;</code> tag</td>
+</tr>
+<tr>
+<td style="text-align: left">newOptionCreator</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">factory to create new options when <code>allowCreate</code> is true</td>
+</tr>
+<tr>
+<td style="text-align: left">noResultsText</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;No results found&#39;</td>
+<td style="text-align: right">placeholder displayed when there are no matching search results</td>
+</tr>
+<tr>
+<td style="text-align: left">onBlur</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">onBlur handler: <code>function(event) {}</code></td>
+</tr>
+<tr>
+<td style="text-align: left">onChange</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">onChange handler: <code>function(newValue) {}</code></td>
+</tr>
+<tr>
+<td style="text-align: left">onFocus</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">onFocus handler: <code>function(event) {}</code></td>
+</tr>
+<tr>
+<td style="text-align: left">onInputChange</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">onInputChange handler: <code>function(inputValue) {}</code></td>
+</tr>
+<tr>
+<td style="text-align: left">onOptionLabelClick</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">onClick handler for value labels: <code>function (value, event) {}</code></td>
+</tr>
+<tr>
+<td style="text-align: left">optionRenderer</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">function which returns a custom way to render the options in the menu</td>
+</tr>
+<tr>
+<td style="text-align: left">options</td>
+<td style="text-align: center">array</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">下拉选项的填充数组</td>
+</tr>
+<tr>
+<td style="text-align: left">placeholder</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;Select ...&#39;</td>
+<td style="text-align: right">当下拉框没有内容时默认显示的文本</td>
+</tr>
+<tr>
+<td style="text-align: left">searchable</td>
+<td style="text-align: center">bool</td>
+<td style="text-align: right">true</td>
+<td style="text-align: right">Select 的搜索功能是否可用</td>
+</tr>
+<tr>
+<td style="text-align: left">searchingText</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;Searching...&#39;</td>
+<td style="text-align: right">message to display whilst options are loading via asyncOptions, or when <code>isLoading</code> is true</td>
+</tr>
+<tr>
+<td style="text-align: left">searchPromptText</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;Type to search&#39;</td>
+<td style="text-align: right">label to prompt for search input</td>
+</tr>
+<tr>
+<td style="text-align: left">value</td>
+<td style="text-align: center">any</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">初始化 select 的默认选中值,对应 options 选项的 value</td>
+</tr>
+<tr>
+<td style="text-align: left">valueKey</td>
+<td style="text-align: center">string</td>
+<td style="text-align: right">&#39;value&#39;</td>
+<td style="text-align: right">the option property to use for the value</td>
+</tr>
+<tr>
+<td style="text-align: left">valueRenderer</td>
+<td style="text-align: center">func</td>
+<td style="text-align: right">undefined</td>
+<td style="text-align: right">function which returns a custom way to render the value selected</td>
+</tr>
+</tbody></table>
+<h3><a class="anchor" name=""></a>组件参考 <a class="hash-link" href="#">#</a></h3>
+<hr>
+
+<p>React-Select v0.9.1版本: <a href="https://github.com/JedWatson/react-select">https://github.com/JedWatson/react-select</a></p>
+
+<script src="/js/components/select/select.js"></script>
+
+<script src="/js/components/select/select-states.js"></script>
+
+<script src="/js/components/select/select-multi.js"></script>
+
+<script src="/js/components/select/select-async.js"></script>
+
+
+    <div class="docs-prevnext">
+      
+        <a class="docs-prev" href="/docs/css/table.html">&larr; Prev</a>
+      
+      
+        <a class="docs-next" href="/docs/css/carousels.html">Next &rarr;</a>
+      
+    </div>
+  </div>
+</section>
+
+
+    <footer class="wrap">
+      <div class="left">
+        <a href="https://github.com/cuzjs/cuz">GitHub</a>
+      </div>
+      <div class="right">
+        &copy; 2015 阿里巴巴 数据技术及产品部
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
