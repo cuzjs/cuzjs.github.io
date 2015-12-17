@@ -2,6 +2,6 @@
 
 var Alert = cuz.Alert;
 
-var App = '\nReactDOM.render(\n\t<div>\n\t\t<Alert bsStyle="success">\n\t\tSucess Alert <a  className="pull-right" href="https://www.taobao.com/">查看详情</a>\n\t\t</Alert>\n\t\t<Alert bsStyle="info">\n\t\tInfo Alert <a  className="pull-right" href="https://www.taobao.com/">查看详情</a>\n\t\t</Alert>\n\t\t<Alert bsStyle="warning">\n\t\tWarning Alert <a className="pull-right" href="https://www.taobao.com/">查看详情</a>\n\t\t</Alert>\n\t\t<Alert bsStyle="danger">\n\t\tDanger Alert <a className="pull-right" href="https://www.taobao.com/">查看详情</a>\n\t\t</Alert>\n\t</div>,\n\tmountNode);\n';
+var App = '\nconst alertInstance = (\n\t<div>\n    <Alert bsStyle="success">\n    Sucess Alert <a  className="pull-right" href="https://www.taobao.com/">查看详情</a>\n    </Alert>\n\n    <Alert bsStyle="info">\n    Info Alert <a  className="pull-right" href="https://www.taobao.com/">查看详情</a>\n    </Alert>\n\n    <Alert bsStyle="warning">\n    Warning Alert <a className="pull-right" href="https://www.taobao.com/">查看详情</a>\n    </Alert>\n\n    <Alert bsStyle="danger">\n    Danger Alert <a className="pull-right" href="https://www.taobao.com/">查看详情</a>\n    </Alert>\n  </div>\n\t);\nReactDOM.render(alertInstance, mountNode);\n';
 
 ReactDOM.render(React.createElement(ReactPlayground, { codeText: App }), document.getElementById('feedback-alert'));

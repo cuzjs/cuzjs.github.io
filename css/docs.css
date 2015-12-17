@@ -4,6 +4,10 @@ body {
     background-color: #f9f9f9;
 }
 
+h1, .h1 {
+  font-size: 30px;
+}
+
 /*
 * CodeMirror 编辑框
 */
@@ -12,7 +16,7 @@ body {
 }
 
 p{
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.75;
 	margin-bottom: 1em;
 }

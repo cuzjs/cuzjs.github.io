@@ -43,9 +43,13 @@
           cuz
         </a>
         <ul class="nav-site nav-site-internal">
-          <ligetting-started/><a href="/docs/getting-started/quick-start.html" class="active">指南</a></li>
           <li>
-            <a href="/docs/css">
+            <a href="/docs/guide/quick-start.html" class="active">
+              指南
+            </a>
+          </li>
+          <li>
+            <a href="/docs/components/grid.html">
               <i class="fa fa-fw fa-puzzle-piece"></i>
               cuz-ui
             </a>
@@ -53,7 +57,7 @@
           <li>
             <a href="#">
               <i class="fa fa-fw fa-magic"></i>
-              cuz-theme
+              cuz-themes
             </a>
           </li>
           <li>
@@ -66,11 +70,6 @@
             <a href="#">
               <i class="fa fa-fw fa-bar-chart"></i>
               cuz-charts
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              支持
             </a>
           </li>
         </ul>
@@ -93,54 +92,12 @@
       <ul>
         
           <li>
-            <a href="/docs/getting-started/quick-start.html">快速开始</a>
+            <a href="/docs/guide/quick-start.html" class="active">快速开始</a>
             
           </li>
         
           <li>
-            <a href="/docs/getting-started/why.html" class="active">为什么使用 cuz?</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  
-    <div class="nav-docs-section">
-      <h3>基础组件</h3>
-      <ul>
-        
-          <li>
-            <a href="/docs/getting-started/why.html" class="active">获取远程数据</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/getting-started/why.html" class="active">双向绑定</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/getting-started/why.html" class="active">表单验证</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/getting-started/why.html" class="active">修改页面标题</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/getting-started/why.html" class="active">弹出提示框</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/getting-started/why.html" class="active">路由控制</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/getting-started/why.html" class="active">调试工具</a>
+            <a href="/docs/guide/why-cuz.html">为什么使用 cuz?</a>
             
           </li>
         
@@ -148,16 +105,38 @@
     </div>
   
     <div class="nav-docs-section">
-      <h3>扩展组件</h3>
+      <h3>未来规划</h3>
       <ul>
         
           <li>
-            <a href="/docs/getting-started/why.html" class="active">class 设置</a>
+            <a href="/docs/guide/0.2.html">0.2</a>
             
           </li>
         
           <li>
-            <a href="/docs/getting-started/why.html" class="active">格式化时间</a>
+            <a href="/docs/guide/0.3.html">0.3</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/1.x.html">1.x</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>更多</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/guide/compile-source.html">编译源码</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/resources.html">外部资源</a>
             
           </li>
         
@@ -173,12 +152,23 @@
     </h1>
     <div class="subHeader"></div>
 
-    <h2><a class="anchor" name="why"></a>Why <a class="hash-link" href="#why">#</a></h2>
+    <h4><a class="anchor" name="step-1.-"></a>Step 1. 安装命令行工具 <a class="hash-link" href="#step-1.-">#</a></h4>
+<p>cuz 的运行依赖于 <a href="https://nodejs.org/en/">NodeJS</a> 0.12.x 及以上(&lt; 5.0.0), NodeJS 安装完成后执行以下命令</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install cuz-cli -g
+</code></pre></div><h4><a class="anchor" name="step-2.---cuz-"></a>Step 2. 创建项目文件夹, 安装 cuz 核心依赖 <a class="hash-link" href="#step-2.---cuz-">#</a></h4>
+<p>使用命令行进行安装</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir cuz-project &amp;&amp; cd cuz-project
+$ npm install cuz
+</code></pre></div><h4><a class="anchor" name="step-3.-"></a>Step 3. 初始化项目 <a class="hash-link" href="#step-3.-">#</a></h4>
+<p>使用命令行进行初始化</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz init
+</code></pre></div><h4><a class="anchor" name="step-4.-"></a>Step 4. 启动调试 <a class="hash-link" href="#step-4.-">#</a></h4>
+<p>一键启动调试，访问 http://127.0.0.1:5000 查看效果</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz dev
+</code></pre></div>
 
     <div class="docs-prevnext">
       
-      
-        <a class="docs-next" href="/docs/getting-started/tutorial.html">Next &rarr;</a>
       
     </div>
   </div>

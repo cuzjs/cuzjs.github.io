@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>标签页 | cuz</title>
+  <title>类目选择 | cuz</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="shortcut icon" href="favicon.ico">
@@ -43,9 +43,13 @@
           cuz
         </a>
         <ul class="nav-site nav-site-internal">
-          <ligetting-started/><a href="/docs/getting-started/quick-start.html">指南</a></li>
           <li>
-            <a href="/docs/css" class="active">
+            <a href="/docs/guide/quick-start.html">
+              指南
+            </a>
+          </li>
+          <li>
+            <a href="/docs/components/grid.html" class="active">
               <i class="fa fa-fw fa-puzzle-piece"></i>
               cuz-ui
             </a>
@@ -53,7 +57,7 @@
           <li>
             <a href="#">
               <i class="fa fa-fw fa-magic"></i>
-              cuz-theme
+              cuz-themes
             </a>
           </li>
           <li>
@@ -66,11 +70,6 @@
             <a href="#">
               <i class="fa fa-fw fa-bar-chart"></i>
               cuz-charts
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              支持
             </a>
           </li>
         </ul>
@@ -93,67 +92,62 @@
       <ul>
         
           <li>
-            <a href="/docs/css/index.html">简介</a>
+            <a href="/docs/components/grid.html">Grid</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/grid.html">Grid</a>
+            <a href="/docs/components/label.html">Label</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/label.html">Label</a>
+            <a href="/docs/components/tab.html">Tab</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/tab.html" class="active">Tab</a>
+            <a href="/docs/components/breadcrumb.html">Breadcrumb</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/breadcrumb.html">Breadcrumb</a>
+            <a href="/docs/components/alert.html">Alert</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/alert.html">Alert</a>
+            <a href="/docs/components/tip.html">Tip</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/tip.html">Tip</a>
+            <a href="/docs/components/box.html">Box</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/box.html">Box</a>
+            <a href="/docs/components/table.html">Table</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/table.html">Table</a>
+            <a href="/docs/components/pagination.html">Pagination</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/pagination.html">Pagination</a>
+            <a href="/docs/components/code.html">Code</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/code.html">Code</a>
+            <a href="/docs/components/modal.html">Modal</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/modal.html">Modal</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/css/carousels.html">Carousels</a>
+            <a href="/docs/components/carousels.html">Carousels</a>
             
           </li>
         
@@ -165,12 +159,27 @@
       <ul>
         
           <li>
-            <a href="/docs/css/button.html">Button</a>
+            <a href="/docs/components/button.html">Button</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/input.html">Input</a>
+            <a href="/docs/components/input.html">Input</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/components/number-input.html">NumberInput</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/components/radio.html">Radio</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/components/checkbox.html">Checkbox</a>
             
           </li>
         
@@ -182,7 +191,7 @@
       <ul>
         
           <li>
-            <a href="/docs/css/calendar.html">Calendar</a>
+            <a href="/docs/components/calendar.html" class="active">Calendar</a>
             
           </li>
         
@@ -195,28 +204,23 @@
 
   <div class="inner-content">
     <h1>
-      标签页
+      类目选择
     </h1>
     <div class="subHeader"></div>
 
     <hr>
-<h2><a class="anchor" name=""></a>一个基本的标签页 <a class="hash-link" href="#">#</a></h2>
+<h2><a class="anchor" name=""></a>日历 <a class="hash-link" href="#">#</a></h2>
 <hr>
 
-<p>通过 <code>&lt;Tab /&gt;</code> 标签，可以快速的创建出一个标签页。将多个标签页放在 <code>&lt;Tabs /&gt;</code> 中，可以生成一组标签。</p>
+<p>使用 <code>&lt;Calendar /&gt;</code> 可以快速生成一个日历.</p>
 
 <div class="">
-  <div id="example-default"></div>
+  <div id="calendar-default"></div>
 </div>
-<h2><a class="anchor" name=""></a>胶囊式标签页 <a class="hash-link" href="#">#</a></h2>
-<hr>
+<h4><a class="anchor" name="buttongroup"></a>ButtonGroup <a class="hash-link" href="#buttongroup">#</a></h4>
+<div class="for-table"></div>
+ 
 
-<p>HTML 标记相同，但在 <code>&lt;Tab /&gt;</code> 中使用 <code>pills</code> 类。</p>
-
-<div class="">
-  <div id="tab-pills"></div>
-</div>
-<h3><a class="anchor" name="props"></a>Props <a class="hash-link" href="#props">#</a></h3><h4><a class="anchor" name="tabs"></a>Tabs <a class="hash-link" href="#tabs">#</a></h4>
 <table><thead>
 <tr>
 <th style="text-align: left">名称</th>
@@ -226,74 +230,44 @@
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left">defaultActiveKey</td>
-<td style="text-align: center">any</td>
-<td style="text-align: right"></td>
-<td style="text-align: right">设定默认的处于 active 状态的 Tab</td>
-</tr>
-<tr>
-<td style="text-align: left">bsStyle</td>
-<td style="text-align: center">以下之一：&quot;tabs&quot;,&quot;pills&quot;</td>
-<td style="text-align: right">&quot;tabs&quot;</td>
-<td style="text-align: right">tabs 导航栏的样式。</td>
-</tr>
-<tr>
-<td style="text-align: left">id</td>
-<td style="text-align: center">string 或 number</td>
-<td style="text-align: right"></td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">position</td>
-<td style="text-align: center">以下之一：&quot;top&quot;,&quot;left&quot;,&quot;right&quot;</td>
-<td style="text-align: right">&quot;top&quot;</td>
-<td style="text-align: right"></td>
-</tr>
-</tbody></table>
-<h4><a class="anchor" name="tab"></a>Tab <a class="hash-link" href="#tab">#</a></h4>
-<table><thead>
-<tr>
-<th style="text-align: left">名称</th>
-<th style="text-align: center">类型</th>
-<th style="text-align: right">缺省值</th>
-<th style="text-align: right">描述</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">animation</td>
+<td style="text-align: left">confirmButton</td>
 <td style="text-align: center">boolean</td>
-<td style="text-align: right">true</td>
-<td style="text-align: right"></td>
+<td style="text-align: right">false</td>
+<td style="text-align: right">类目选择中是否显示 &#39;确认&#39;的按钮</td>
 </tr>
 <tr>
-<td style="text-align: left">disabled</td>
+<td style="text-align: left">cancelButton</td>
 <td style="text-align: center">boolean</td>
-<td style="text-align: right"></td>
-<td style="text-align: right"></td>
+<td style="text-align: right">false</td>
+<td style="text-align: right">类目选择中是否显示 &#39;取消&#39;的按钮</td>
 </tr>
 <tr>
-<td style="text-align: left">title</td>
-<td style="text-align: center">node</td>
+<td style="text-align: left">data</td>
+<td style="text-align: center">json</td>
 <td style="text-align: right"></td>
+<td style="text-align: right">用于生成类目内容和级别的数据源</td>
+</tr>
+<tr>
+<td style="text-align: left">onSelect</td>
+<td style="text-align: center">function</td>
 <td style="text-align: right"></td>
+<td style="text-align: right">确认选中时的事件</td>
 </tr>
 </tbody></table>
 <h3><a class="anchor" name=""></a>组件参考 <a class="hash-link" href="#">#</a></h3>
 <hr>
 
-<p>React-Bootstrap官方文档: <a href="http://react-bootstrap.github.io/components.html#navs">http://react-bootstrap.github.io/components.html#navs</a></p>
+<p>rc-calendar : <a href="https://github.com/react-component/calendar">https://github.com/react-component/calendar</a></p>
 
-<script src="/js/components/tab/tab.js"></script>
-
-<script src="/js/components/tab/tab-pills.js"></script>
+<script src="/js/components/calendar/calendar.js"></script>
 
 
     <div class="docs-prevnext">
       
-        <a class="docs-prev" href="/docs/css/label.html">&larr; Prev</a>
+        <a class="docs-prev" href="/docs/components/category.html">&larr; Prev</a>
       
       
-        <a class="docs-next" href="/docs/css/breadcrumb.html">Next &rarr;</a>
+        <a class="docs-next" href="/docs/components/calendar.html">Next &rarr;</a>
       
     </div>
   </div>

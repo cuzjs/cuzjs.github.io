@@ -43,9 +43,13 @@
           cuz
         </a>
         <ul class="nav-site nav-site-internal">
-          <ligetting-started/><a href="/docs/getting-started/quick-start.html">指南</a></li>
           <li>
-            <a href="/docs/css" class="active">
+            <a href="/docs/guide/quick-start.html">
+              指南
+            </a>
+          </li>
+          <li>
+            <a href="/docs/components/grid.html" class="active">
               <i class="fa fa-fw fa-puzzle-piece"></i>
               cuz-ui
             </a>
@@ -53,7 +57,7 @@
           <li>
             <a href="#">
               <i class="fa fa-fw fa-magic"></i>
-              cuz-theme
+              cuz-themes
             </a>
           </li>
           <li>
@@ -66,11 +70,6 @@
             <a href="#">
               <i class="fa fa-fw fa-bar-chart"></i>
               cuz-charts
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              支持
             </a>
           </li>
         </ul>
@@ -93,67 +92,62 @@
       <ul>
         
           <li>
-            <a href="/docs/css/index.html">简介</a>
+            <a href="/docs/components/grid.html">Grid</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/grid.html">Grid</a>
+            <a href="/docs/components/label.html">Label</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/label.html">Label</a>
+            <a href="/docs/components/tab.html">Tab</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/tab.html">Tab</a>
+            <a href="/docs/components/breadcrumb.html">Breadcrumb</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/breadcrumb.html">Breadcrumb</a>
+            <a href="/docs/components/alert.html">Alert</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/alert.html">Alert</a>
+            <a href="/docs/components/tip.html">Tip</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/tip.html">Tip</a>
+            <a href="/docs/components/box.html">Box</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/box.html">Box</a>
+            <a href="/docs/components/table.html">Table</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/table.html">Table</a>
+            <a href="/docs/components/pagination.html">Pagination</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/pagination.html">Pagination</a>
+            <a href="/docs/components/code.html">Code</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/code.html">Code</a>
+            <a href="/docs/components/modal.html">Modal</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/modal.html">Modal</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/css/carousels.html">Carousels</a>
+            <a href="/docs/components/carousels.html">Carousels</a>
             
           </li>
         
@@ -165,12 +159,27 @@
       <ul>
         
           <li>
-            <a href="/docs/css/button.html">Button</a>
+            <a href="/docs/components/button.html">Button</a>
             
           </li>
         
           <li>
-            <a href="/docs/css/input.html" class="active">Input</a>
+            <a href="/docs/components/input.html" class="active">Input</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/components/number-input.html">NumberInput</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/components/radio.html">Radio</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/components/checkbox.html">Checkbox</a>
             
           </li>
         
@@ -182,7 +191,7 @@
       <ul>
         
           <li>
-            <a href="/docs/css/calendar.html">Calendar</a>
+            <a href="/docs/components/calendar.html">Calendar</a>
             
           </li>
         
@@ -229,30 +238,6 @@
 <div>
   <div id="input-search"></div>
 </div></p>
-<h2><a class="anchor" name="-numberinput"></a>计数器 NumberInput <a class="hash-link" href="#-numberinput">#</a></h2>
-<hr>
-
-<p>使用 <code>NumberInput</code> 标签，可以快速生成一个简单的计数器。通过 <code>value</code> 属性可以定义计数器的初始值。 <code>step</code> 属性可以定义每次点击数值的改变量，默认为1。而使用 <code>max</code> 和 <code>min</code> 属性则可以定义计数器计数的上限值和下限值。</p>
-
-<div>
-  <div id="input-numberInput"></div>
-</div>
-<h2><a class="anchor" name=""></a>单选按钮 <a class="hash-link" href="#">#</a></h2>
-<hr>
-
-<p>对 <code>&lt;input /&gt;</code> 使用 <code>type=&quot;radio&quot;</code> 可以生成单选按钮，将多个按钮添加到 <code>&lt;RadioGroup /&gt;</code> 中可以生成按钮组。</p>
-
-<div>
-  <div id="input-radio"></div>
-</div>
-<h2><a class="anchor" name=""></a>多选按钮 <a class="hash-link" href="#">#</a></h2>
-<hr>
-
-<p>对 <code>&lt;input /&gt;</code> 使用 <code>type=&quot;checkbox&quot;</code> 可以生成多选按钮，添加 <code>checked</code> 属性会使按钮默认被选中。</p>
-
-<div>
-  <div id="input-checkBox"></div>
-</div>
 <h3><a class="anchor" name="props"></a>Props <a class="hash-link" href="#props">#</a></h3><h4><a class="anchor" name="input"></a>Input <a class="hash-link" href="#input">#</a></h4>
 <table><thead>
 <tr>
@@ -376,8 +361,6 @@
 
 <p>React-Bootstrap官方文档: <a href="http://react-bootstrap.github.io/components.html#forms">http://react-bootstrap.github.io/components.html#forms</a></p>
 
-<script src="/js/components/input/input-numberInput.js"></script>
-
 <script src="/js/components/input/input.js"></script>
 
 <script src="/js/components/input/input-state.js"></script>
@@ -386,17 +369,13 @@
 
 <script src="/js/components/input/input-search.js"></script>
 
-<script src="/js/components/input/input-radio.js"></script>
-
-<script src="/js/components/input/input-checkBox.js"></script>
-
 
     <div class="docs-prevnext">
       
-        <a class="docs-prev" href="/docs/css/button.html">&larr; Prev</a>
+        <a class="docs-prev" href="/docs/components/button.html">&larr; Prev</a>
       
       
-        <a class="docs-next" href="/docs/css/label.html">Next &rarr;</a>
+        <a class="docs-next" href="/docs/components/label.html">Next &rarr;</a>
       
     </div>
   </div>
