@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>NumberInput | cuz</title>
+  <title>Redux | cuz</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="shortcut icon" href="favicon.ico">
@@ -43,12 +43,12 @@
         </a>
         <ul class="nav-site nav-site-internal">
           <li>
-            <a href="/docs/guide/quick-start.html">
+            <a href="/docs/guide/quick-start.html" class="active">
               指南
             </a>
           </li>
           <li>
-            <a href="/docs/components/grid.html" class="active">
+            <a href="/docs/components/grid.html">
               <i class="fa fa-fw fa-puzzle-piece"></i>
               cuz-ui
             </a>
@@ -87,66 +87,16 @@
   <div class="nav-docs">
   
     <div class="nav-docs-section">
-      <h3>基本组件</h3>
+      <h3>快速入门</h3>
       <ul>
         
           <li>
-            <a href="/docs/components/grid.html">Grid</a>
+            <a href="/docs/guide/quick-start.html">快速开始</a>
             
           </li>
         
           <li>
-            <a href="/docs/components/label.html">Label</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/tab.html">Tab</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/breadcrumb.html">Breadcrumb</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/alert.html">Alert</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/tip.html">Tip</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/box.html">Box</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/table.html">Table</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/pagination.html">Pagination</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/code.html">Code</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/modal.html">Modal</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/carousels.html">Carousels</a>
+            <a href="/docs/guide/why-cuz.html">为什么使用 cuz?</a>
             
           </li>
         
@@ -154,31 +104,16 @@
     </div>
   
     <div class="nav-docs-section">
-      <h3>表单组件</h3>
+      <h3>基础功能</h3>
       <ul>
         
           <li>
-            <a href="/docs/components/button.html">Button</a>
+            <a href="/docs/guide/config.html">配置文件</a>
             
           </li>
         
           <li>
-            <a href="/docs/components/input.html">Input</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/number-input.html" class="active">NumberInput</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/radio.html">Radio</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/components/checkbox.html">Checkbox</a>
+            <a href="/docs/guide/redux.html" class="active">Redux</a>
             
           </li>
         
@@ -186,11 +121,38 @@
     </div>
   
     <div class="nav-docs-section">
-      <h3>高级组件</h3>
+      <h3>未来规划</h3>
       <ul>
         
           <li>
-            <a href="/docs/components/calendar.html">Calendar</a>
+            <a href="/docs/guide/0.2.html">0.2</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/0.3.html">0.3</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/1.x.html">1.x</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>更多</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/guide/compile-source.html">编译源码</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/resources.html">外部资源</a>
             
           </li>
         
@@ -198,26 +160,39 @@
     </div>
   
 </div>
-
 
 
   <div class="inner-content">
     <h1>
-      NumberInput
+      Redux
     </h1>
     <div class="subHeader"></div>
 
-    <h2><a class="anchor" name="-numberinput"></a>计数器 NumberInput <a class="hash-link" href="#-numberinput">#</a></h2>
-<hr>
+    <p>下面是一个标准 Action + Reducer 的写法, 供参考:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">import { createReducer } from &#39;cuz&#39;;
 
-<p>使用 <code>NumberInput</code> 标签，可以快速生成一个简单的计数器。通过 <code>value</code> 属性可以定义计数器的初始值。 <code>step</code> 属性可以定义每次点击数值的改变量，默认为1。而使用 <code>max</code> 和 <code>min</code> 属性则可以定义计数器计数的上限值和下限值。</p>
+const FETCH_DATA = &#39;fetch data&#39;;
 
-<div>
-  <div id="input-numberInput"></div>
-</div>
+export function fetchData() {
+  return {
+    type: FETCH_DATA,
+    promise: (request) =&gt; request.get(`/data`)
+  };
+}
 
-<script src="/js/components/input/input-numberInput.js"></script>
+const initState = {
+  data: [],
+}
 
+export default createReducer(initState, {
+  [FETCH_DATA](state, action) {
+    return {
+      ...state,
+      data: action.result.retValue,
+    }
+  }
+});
+</code></pre></div>
 
     <div class="docs-prevnext">
       
