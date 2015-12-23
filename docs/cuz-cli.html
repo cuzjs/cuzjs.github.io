@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>为什么使用 cuz? | cuz</title>
+  <title>cuz-cli | cuz</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="shortcut icon" href="favicon.ico">
@@ -44,7 +44,7 @@
         </a>
         <ul class="nav-site nav-site-internal">
           <li>
-            <a href="/docs/guide/quick-start.html" class="active">
+            <a href="/docs/guide/quick-start.html">
               指南
             </a>
           </li>
@@ -61,7 +61,7 @@
             </a>
           </li>
           <li>
-            <a href="/docs/cuz-cli.html">
+            <a href="/docs/cuz-cli.html" class="active">
               <i class="fa fa-fw fa-terminal"></i>
               cuz-cli
             </a>
@@ -84,105 +84,48 @@
 
     
 
-    <section class="content wrap documentationContent">
-  <div class="nav-docs">
-  
-    <div class="nav-docs-section">
-      <h3>快速入门</h3>
-      <ul>
-        
-          <li>
-            <a href="/docs/guide/quick-start.html">快速开始</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/guide/why-cuz.html" class="active">为什么使用 cuz?</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  
-    <div class="nav-docs-section">
-      <h3>基础功能</h3>
-      <ul>
-        
-          <li>
-            <a href="/docs/guide/config.html">配置文件</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  
-    <div class="nav-docs-section">
-      <h3>未来规划</h3>
-      <ul>
-        
-          <li>
-            <a href="/docs/guide/0.2.html">0.2</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/guide/0.3.html">0.3</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/guide/1.x.html">1.x</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  
-    <div class="nav-docs-section">
-      <h3>更多</h3>
-      <ul>
-        
-          <li>
-            <a href="/docs/guide/compile-source.html">编译源码</a>
-            
-          </li>
-        
-          <li>
-            <a href="/docs/guide/resources.html">外部资源</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  
-</div>
-
-
+    <section class="content wrap documentationContent nosidebar">
   <div class="inner-content">
-    <h1>
-      为什么使用 cuz?
-    </h1>
+    <h1>cuz-cli</h1>
     <div class="subHeader"></div>
-
-    <p>面对目前日益繁杂的前端开发, cuz 的目标是<strong>简化开发流程</strong>, 整合开源社区的高可用组件, 使其能通过统一的方式进行调用.<br>
-让大家将注意力从复杂的 DOM 交互转移到实际业务中.</p>
-
-<p>为实现目标, cuz 主要分为以下几个部分:</p>
-
+    <p>cuz-cli 是 cuz 的命令行接口工具, 基于 Webpack 实现, 用于对项目进行调试和构建.</p>
+<h2><a class="anchor" name=""></a>特性 <a class="hash-link" href="#">#</a></h2>
 <ul>
-<li><strong>cuz</strong>: 模块化构建框架核心, 包括大量的第三方依赖, 如 React, Redux, Babel.</li>
-<li><strong>cuz-cli</strong>: 辅助开发命令行工具, 基于 NodeJS.</li>
-<li><strong>cuz-ui</strong>: 组件库, 基于 Bootstrap.</li>
-<li><strong>cuz-themes</strong>: CSS 主题, 支持多主题切换.</li>
-<li><strong>cuz-charts</strong>: 图表库, 基于 EChart. 实现仅提供 WEB API 和简单配置即可生成图表.</li>
-<li><strong>cuz-docs</strong>: 承载 cuz 入门教程, 指南及相关规范文档的站点, 基于 jekyll.</li>
+<li>支持 ES6 &amp; ES7</li>
+<li>支持 LESS &amp; SASS</li>
+<li>支持 ESLint 语法检查</li>
+<li>支持显示声明不同的构建环境</li>
+<li>支持自动打包所有静态资源文件 (js, html, images, fonts)</li>
+<li>支持配置 CDN 发布路径</li>
 </ul>
+<h2><a class="anchor" name=""></a>使用说明 <a class="hash-link" href="#">#</a></h2><h3><a class="anchor" name=""></a>安装 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install cuz-cli -g
+</code></pre></div>
+<blockquote>
+<p>Note:</p>
 
+<p>命令行工具安装完成后, 需安装具体 cuz 版本才可使用下面的命令.</p>
+</blockquote>
+<h3><a class="anchor" name=""></a>使用 <a class="hash-link" href="#">#</a></h3><h4><a class="anchor" name=""></a>初始化项目 <a class="hash-link" href="#">#</a></h4>
+<p>初始化命令可以生成一个标准模版项目, 您可以直接模版上进行后续开发.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz init
+</code></pre></div><h4><a class="anchor" name=""></a>本地调试 <a class="hash-link" href="#">#</a></h4>
+<p>本地调试命令将启动一个 <code>localhost</code> 的 Web 环境供浏览器直接访问, 默认端口号为 <code>5000</code>, 您也可以在 <a href="/docs/guide/config.html">配置文件</a> 中修改它以避免冲突.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz dev
+</code></pre></div><h4><a class="anchor" name=""></a>构建 <a class="hash-link" href="#">#</a></h4>
+<p>构建命令将自动打包项目中使用到的所有静态资源文件, 并生成到 <code>build</code> 目录中.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz build
+</code></pre></div><h2><a class="anchor" name=""></a>指定环境变量 <a class="hash-link" href="#">#</a></h2>
+<p>在默认情况下, 本地调试为<code>开发环境</code>, 构建项目为<code>生产环境</code>. 不过, cuz-cli 也支持您显示的声明当前环境变量.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz dev --dev  # 使用 development 环境 (默认)
+$ cuz dev --test # 使用 testing 环境
+$ cuz dev --prd  # 使用 production 环境
 
-    <div class="docs-prevnext">
-      
-      
-    </div>
+$ cuz build --dev  # 使用 development 环境
+$ cuz build --test # 使用 testing 环境
+$ cuz build --prd  # 使用 production 环境 (默认)
+</code></pre></div>
+
+    
   </div>
 </section>
 

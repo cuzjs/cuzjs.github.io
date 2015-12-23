@@ -4,10 +4,6 @@ body {
     background-color: #f9f9f9;
 }
 
-h1, .h1 {
-  font-size: 30px;
-}
-
 /*
 * CodeMirror 编辑框
 */
