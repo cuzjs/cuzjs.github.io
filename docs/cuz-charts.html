@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>支持 | cuz</title>
+  <title>cuz-charts | cuz</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="shortcut icon" href="favicon.ico">
@@ -66,7 +66,7 @@
             </a>
           </li>
           <li>
-            <a href="/docs/cuz-charts.html">
+            <a href="/docs/cuz-charts.html" class="active">
               <i class="fa fa-fw fa-bar-chart"></i>
               cuz-charts
             </a>
@@ -85,9 +85,73 @@
 
     <section class="content wrap documentationContent nosidebar">
   <div class="inner-content">
-    <h1>支持</h1>
+    <h1>cuz-charts</h1>
     <div class="subHeader"></div>
-    <h2><a class="anchor" name=""></a>相关组件 <a class="hash-link" href="#">#</a></h2><h2><a class="anchor" name=""></a>相关链接 <a class="hash-link" href="#">#</a></h2>
+    <p>cuz-charts 是基于 ECharts 的图表组件简单封装, 使用 React 的方式统一调用.</p>
+<h2><a class="anchor" name=""></a>调用方式 <a class="hash-link" href="#">#</a></h2><div class="highlight"><pre><code class="language-text" data-lang="text">// 默认数据格式: 
+// data = {male: 422, female: 631}
+&lt;Chart title=&#39;分布图&#39;&gt;
+  &lt;Chart.Pie data={data} title=&#39;SEX&#39; /&gt;
+&lt;/Chart&gt;
+
+// 手动设置 key, value 对应绑定的字段
+// data = [{myKey: &#39;male&#39;, myValue: &#39;422&#39;}, {myKey: &#39;female&#39;, myValue: &#39;631&#39;}]
+&lt;Chart title=&#39;设置 key, value&#39;&gt;
+  &lt;Chart.Bar data={data} key=&#39;myKey&#39; value=&#39;myValue&#39; /&gt;
+&lt;/Chart&gt;
+
+// 手动设置 key, value 对应绑定的字段 (deep path)
+// data = [{info: {name: &#39;male&#39;}, myValue: &#39;422&#39;}, {info: {name:&#39;female&#39;}, myValue: &#39;631&#39;}]
+&lt;Chart title=&#39;设置 key, value&#39;&gt;
+  &lt;Chart.Bar data={data} key=&#39;info.name&#39; value=&#39;myValue&#39; /&gt;
+&lt;/Chart&gt;
+
+// 多图表
+// data = {
+//   CN: {male: 854, female: 752}, 
+//   US: {male: 550, female: 444}, 
+//   JP: {male: 720, female: 508}
+// }
+&lt;Chart&gt;
+  &lt;Chart.Line data={data.CN} title=&quot;中国&quot; /&gt;
+  &lt;Chart.Line data={data.US} title=&quot;美国&quot; /&gt;
+  &lt;Chart.Line data={data.JP} title=&quot;日本&quot; /&gt;
+&lt;/Chart&gt;
+
+// 动态多图表
+// data = [
+//   {data: {male: 854, female: 752}, title: &quot;中国&quot; },
+//   {data: {male: 550, female: 444}, title: &quot;中国&quot; },
+//   {data: {male: 720, female: 508}, title: &quot;中国&quot; }
+// ]
+&lt;Chart&gt;
+  {data.map((item) =&gt;
+    &lt;Chart.Line data={item.data} title={item.title} /&gt;
+  )}
+&lt;/Chart&gt;
+
+// 地图
+// data = {
+//   &quot;China&quot;: 500,
+//   &quot;India&quot;: 800
+// }
+&lt;Chart lengend={[&#39;China&#39;]}&gt;
+  &lt;Chart.Map data={data} /&gt;
+&lt;/Chart&gt;
+
+// ref 获取 echart 对象
+&lt;Chart ref=&quot;echart&quot;&gt;
+  &lt;Chart.Line data={data} /&gt;
+&lt;/Chart&gt;
+
+const echart = this.refs.echart;
+echart.refresh()
+
+// 自定义
+&lt;Chart title=&#39;自定义 config&#39; config={(config) =&gt; config}&gt;
+  &lt;Chart.Bar data={data} /&gt;
+&lt;/Chart&gt;
+</code></pre></div>
 
     
   </div>
