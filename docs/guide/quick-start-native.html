@@ -174,14 +174,21 @@
     <div class="subHeader"></div>
 
     <h4><a class="anchor" name="step-1.-"></a>Step 1. 安装命令行工具 <a class="hash-link" href="#step-1.-">#</a></h4>
-<p>cuz-native 的运行依赖于 <a href="https://nodejs.org/en/">NodeJS</a> 4.0.0 及以上(&lt; 5.0.0), NodeJS 安装完成后执行以下命令</p>
+<p>cuz-native 运行依赖</p>
+
+<ol>
+<li><a href="https://nodejs.org/en/">NodeJS</a> 4.0.0 及以上(&lt; 5.0.0)</li>
+<li><a href="https://developer.apple.com/xcode/">XCode</a> 7.0 及以上</li>
+</ol>
+
+<p>安装完成后执行以下命令</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install cuz-cli -g
 </code></pre></div><h4><a class="anchor" name="step-2.---cuz-"></a>Step 2. 创建项目文件夹, 安装 cuz 核心依赖 <a class="hash-link" href="#step-2.---cuz-">#</a></h4>
 <p>使用命令行进行安装</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir native-project &amp;&amp; cd native-project
 $ npm install cuz-native
 </code></pre></div><h4><a class="anchor" name="step-3.-"></a>Step 3. 初始化项目 <a class="hash-link" href="#step-3.-">#</a></h4>
-<p>使用命令行进行初始化并允许 <code>node_modules</code> 补丁</p>
+<p>使用命令行进行初始化并执行 <code>node_modules 补丁</code>.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz init
 $ node patch.js
 </code></pre></div><h4><a class="anchor" name="step-4.-"></a>Step 4. 启动调试 <a class="hash-link" href="#step-4.-">#</a></h4>
