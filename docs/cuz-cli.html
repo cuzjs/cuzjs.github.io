@@ -92,9 +92,10 @@
 <ul>
 <li>支持 ES6 &amp; ES7</li>
 <li>支持 LESS &amp; SASS</li>
-<li>支持 ESLint 语法检查</li>
-<li>支持显示声明不同的构建环境</li>
-<li>支持自动打包所有静态资源文件 (js, html, images, fonts)</li>
+<li>集成 ESLint 语法检查</li>
+<li>集成 Mocha 单元测试套件</li>
+<li>支持构件时声明不同的环境</li>
+<li>支持打包静态资源文件</li>
 <li>支持配置 CDN 发布路径</li>
 </ul>
 <h2><a class="anchor" name=""></a>使用说明 <a class="hash-link" href="#">#</a></h2><h3><a class="anchor" name=""></a>安装 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install cuz-cli -g
@@ -113,15 +114,14 @@
 </code></pre></div><h4><a class="anchor" name=""></a>构建 <a class="hash-link" href="#">#</a></h4>
 <p>构建命令将自动打包项目中使用到的所有静态资源文件, 并生成到 <code>build</code> 目录中.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz build
+</code></pre></div><h4><a class="anchor" name=""></a>测试 <a class="hash-link" href="#">#</a></h4>
+<p>运行测试命令将自动遍历并运行 <code>test</code> 目录下所有单元测试.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz test
 </code></pre></div><h2><a class="anchor" name=""></a>指定环境变量 <a class="hash-link" href="#">#</a></h2>
-<p>在默认情况下, 本地调试为<code>开发环境</code>, 构建项目为<code>生产环境</code>. 不过 cuz-cli 也支持您显示的声明当前环境变量, 具体方式如下:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz dev --dev  # 使用 development 环境 (默认)
-$ cuz dev --test # 使用 testing 环境
-$ cuz dev --prd  # 使用 production 环境
-
-$ cuz build --dev  # 使用 development 环境
-$ cuz build --test # 使用 testing 环境
-$ cuz build --prd  # 使用 production 环境 (默认)
+<p>在默认情况下, 本地调试为<code>开发环境(development)</code>, 构建项目为<code>生产环境(production)</code>. 不过 cuz-cli 也支持您显示的声明当前环境变量, 具体方式如下:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz -e production
+$ cuz build -e development
+$ cuz --env custom-env  # 用户自定义环境
 </code></pre></div>
 
     
