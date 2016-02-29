@@ -7,12 +7,12 @@
   <title>类目选择 | cuz</title>
   <meta name="viewport" content="width=device-width">
 
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="/logo.png">
 
+  <link rel="stylesheet" href="/css/cuz.css">
   <link rel="stylesheet" href="/css/syntax.css">
   <link rel="stylesheet" href="/css/codemirror.css">
   <link rel="stylesheet" href="/css/index.css">
-  <link rel="stylesheet" href="/css/cuz.css">
   <link rel="stylesheet" href="/css/docs.css">
 
   <!--[if lte IE 8]>
@@ -21,7 +21,6 @@
   <script src="/js/es5-sham.min.js"></script>
   <![endif]-->
   <script src="/js/codemirror.js"></script>
-  <!-- <script src="/js/react-dom.js"></script> -->
   <script src="/js/JSXTransformer.js"></script>
   <script src="/js/cuz.js"></script>
   <script>
@@ -38,44 +37,34 @@
     <div class="nav-main">
       <div class="wrap">
         <a class="nav-home" href="/index.html">
-          <span class="nav-logo fa fa-diamond" width="36" height="36"></span>
-          cuz
+          <img src="/logo-white.png" class="nav-logo" width="38" height="28" />
+          CUZ
+          <span class="nav-beta">Beta</span>
         </a>
+        <span class="nav-desc">前端构建套件</span>
         <ul class="nav-site nav-site-internal">
-          <li>
-            <a href="/docs/guide/quick-start.html">
-              指南
-            </a>
-          </li>
-          <li>
-            <a href="/docs/components/grid.html" class="active">
-              <i class="fa fa-fw fa-puzzle-piece"></i>
-              cuz-ui
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-fw fa-magic"></i>
-              cuz-themes
-            </a>
-          </li>
-          <li>
-            <a href="/docs/cuz-cli.html">
-              <i class="fa fa-fw fa-terminal"></i>
-              cuz-cli
-            </a>
-          </li>
-          <li>
-            <a href="/docs/cuz-charts.html">
-              <i class="fa fa-fw fa-bar-chart"></i>
-              cuz-charts
-            </a>
-          </li>
         </ul>
 
         <ul class="nav-site nav-site-external">
           <li>
-            <a href="https://github.com/cuzjs/cuz">GitHub</a>
+            <a href="/docs/guide/quick-start.html">
+              Docs
+            </a>
+          </li>
+          <li>
+            <a href="/docs/components/grid.html" class="active">
+              UI
+            </a>
+          </li>
+          <li>
+            <a href="/docs/cuz-charts.html">
+              Charts
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/cuzjs/cuz">
+              <i class="fa fa-fw fa-github"></i>
+            </a>
           </li>
         </ul>
       </div>

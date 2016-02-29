@@ -1,24 +1,22 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
-    font-size:14px;
-    background-color: #f9f9f9;
 }
 
-/*
-* CodeMirror 编辑框
-*/
 .playground-tab {
-	display: none;
+  display: none;
+}
+
+pre {
+  font-size: 12px;
 }
 
 p{
-	font-size: 14px;
-	line-height: 1.75;
-	margin-bottom: 1em;
+  line-height: 1.75;
+  margin-bottom: 1em;
 }
 
 code{
-	  padding: 2px 4px;
+    padding: 2px 4px;
     font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
@@ -26,9 +24,13 @@ code{
 }
 
 p a:hover{
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .for-table + table {
-	border-radius: 5px;
+  border-radius: 5px;
+}
+
+hr {
+  display: none;
 }

@@ -20,7 +20,7 @@ var CodeMirrorEditor = React.createClass({
     this.editor = CodeMirror.fromTextArea(ReactDOM.findDOMNode(this.refs.editor), {
       mode: 'javascript',
       lineNumbers: this.props.lineNumbers, //是否显示行号
-      //lineWrapping: true, //在长行时文字是换行(wrap)还是滚动(scroll)，默认为滚动(scroll)。
+      lineWrapping: true, //在长行时文字是换行(wrap)还是滚动(scroll)，默认为滚动(scroll)。
       smartIndent: false, // javascript mode does bad things with jsx indents
       matchBrackets: true,
       theme: 'solarized',
@@ -107,7 +107,7 @@ var ReactPlayground = React.createClass({
       },
       editorTabTitle: 'Live JSX Editor',
       showCompiledJSTab: true,
-      showLineNumbers: true
+      showLineNumbers: false
     };
   },
 
