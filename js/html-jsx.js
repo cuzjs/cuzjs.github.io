@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -11,8 +13,6 @@
  * This is a web interface for the HTML to JSX converter contained in
  * `html-jsx-lib.js`.
  */
-"use strict";
-
 ;(function () {
 
   var HELLO_COMPONENT = "\

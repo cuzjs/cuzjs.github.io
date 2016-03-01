@@ -16,11 +16,11 @@ p{
 }
 
 code{
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
 }
 
 p a:hover{
@@ -31,6 +31,7 @@ p a:hover{
   border-radius: 5px;
 }
 
-hr {
-  display: none;
+.btn {
+  margin-right: 8px;
+  margin-bottom: 12px;
 }

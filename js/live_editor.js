@@ -20,7 +20,7 @@ var CodeMirrorEditor = React.createClass({
     this.editor = CodeMirror.fromTextArea(ReactDOM.findDOMNode(this.refs.editor), {
       mode: 'javascript',
       lineNumbers: this.props.lineNumbers, //是否显示行号
-      lineWrapping: true, //在长行时文字是换行(wrap)还是滚动(scroll)，默认为滚动(scroll)。
+      lineWrapping: true,
       smartIndent: false, // javascript mode does bad things with jsx indents
       matchBrackets: true,
       theme: 'solarized',
@@ -68,7 +68,7 @@ var selfCleaningTimeout = {
     clearTimeout(this.timeoutID);
   },
 
-  setTimeout: (function (_setTimeout) {
+  setTimeout: function (_setTimeout) {
     function setTimeout() {
       return _setTimeout.apply(this, arguments);
     }
@@ -78,7 +78,7 @@ var selfCleaningTimeout = {
     };
 
     return setTimeout;
-  })(function () {
+  }(function () {
     clearTimeout(this.timeoutID);
     this.timeoutID = setTimeout.apply(null, arguments);
   })
