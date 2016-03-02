@@ -1,8 +1,8 @@
 'use strict';
 
-var ButtonToolbar = cuz.ButtonToolbar;
 var Button = cuz.Button;
+var ButtonToolbar = cuz.ButtonToolbar;
 
-var App = '\nconst buttonSizeInstance = (\n  <div>\n    <ButtonToolbar style={{marginBottom:\'10px\'}}>\n      <Button bsStyle="default">Button</Button>\n      <Button bsStyle="primary">Button</Button>\n    </ButtonToolbar>\n\n    <ButtonToolbar>\n      <Button bsStyle="default" bsSize="small">Small button</Button>\n      <Button bsStyle="primary" bsSize="small">Small button</Button>\n    </ButtonToolbar>\n  </div>\n  );\n\nReactDOM.render(buttonSizeInstance, mountNode);\n';
+var App = '\nReactDOM.render(<div>\n  <ButtonToolbar>\n    <Button bsStyle="default">默认按钮</Button>\n    <Button bsStyle="primary">默认按钮</Button>\n  </ButtonToolbar>\n\n  <ButtonToolbar>\n    <Button bsStyle="default" bsSize="small">小号按钮</Button>\n    <Button bsStyle="primary" bsSize="small">小号按钮</Button>\n  </ButtonToolbar>\n</div>\n, mountNode);\n';
 
 ReactDOM.render(React.createElement(ReactPlayground, { codeText: App }), document.getElementById('btn-size'));

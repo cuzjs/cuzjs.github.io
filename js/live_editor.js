@@ -18,12 +18,12 @@ var CodeMirrorEditor = React.createClass({
     if (IS_MOBILE) return;
 
     this.editor = CodeMirror.fromTextArea(ReactDOM.findDOMNode(this.refs.editor), {
-      mode: 'javascript',
-      lineNumbers: this.props.lineNumbers, //是否显示行号
+      mode: 'jsx',
+      lineNumbers: this.props.lineNumbers,
       lineWrapping: true,
       smartIndent: false, // javascript mode does bad things with jsx indents
       matchBrackets: true,
-      theme: 'solarized',
+      theme: 'solarized-light',
       readOnly: this.props.readOnly
     });
     this.editor.on('change', this.handleChange);
@@ -103,7 +103,7 @@ var ReactPlayground = React.createClass({
   getDefaultProps: function getDefaultProps() {
     return {
       transformer: function transformer(code) {
-        return JSXTransformer.transform(code).code;
+        return babel.transform(code).code;
       },
       editorTabTitle: 'Live JSX Editor',
       showCompiledJSTab: true,
@@ -112,9 +112,21 @@ var ReactPlayground = React.createClass({
   },
 
   getInitialState: function getInitialState() {
+    // 移除前后空行
+    var code = this.props.codeText;
+    console.log(code[0] === '\n');
+    if (code.length) {
+      if (code[0] === '\n') {
+        code = code.substr(1);
+      }
+      if (code[code.length - 1] === '\n') {
+        code = code.substr(0, code.length - 1);
+      }
+    }
+
     return {
       mode: this.MODES.JSX,
-      code: this.props.codeText
+      code: code
     };
   },
 
@@ -179,6 +191,11 @@ var ReactPlayground = React.createClass({
       { className: 'playground' },
       React.createElement(
         'div',
+        { className: 'playgroundPreview' },
+        React.createElement('div', { ref: 'mount' })
+      ),
+      React.createElement(
+        'div',
         null,
         JSXTab,
         this.props.showCompiledJSTab && JSTab
@@ -187,11 +204,6 @@ var ReactPlayground = React.createClass({
         'div',
         { className: 'playgroundCode' },
         isJS ? JSContent : JSXContent
-      ),
-      React.createElement(
-        'div',
-        { className: 'playgroundPreview' },
-        React.createElement('div', { ref: 'mount' })
       )
     );
   },
