@@ -1,8 +1,7 @@
 'use strict';
 
 var Button = cuz.Button;
-var ButtonToolbar = cuz.ButtonToolbar;
 
-var App = '\nReactDOM.render(\n  <ButtonToolbar>\n    <Button bsStyle="default" bsSize="large" active>Button</Button>\n    <Button bsStyle="primary" bsSize="large" active>Primary button</Button>\n  </ButtonToolbar>,\n  mountNode);\n';
+var App = '\nReactDOM.render(<div>\n  <Button active>激活按钮</Button>\n  <Button type="primary" active>激活按钮</Button>\n</div>,\nmountNode);\n';
 
 ReactDOM.render(React.createElement(ReactPlayground, { codeText: App }), document.getElementById('btn-state-active'));

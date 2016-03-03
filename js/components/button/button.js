@@ -1,8 +1,7 @@
 'use strict';
 
 var Button = cuz.Button;
-var ButtonToolbar = cuz.ButtonToolbar;
 
-var App = '\nReactDOM.render(<ButtonToolbar>\n  <Button bsStyle="primary">主按钮</Button>\n  <Button bsStyle="">次按钮</Button>\n  <Button bsStyle="default">透明按钮</Button>\n</ButtonToolbar>,\nmountNode);\n';
+var App = '\nReactDOM.render(<div>\n  <Button type="primary">主按钮</Button>\n  <Button>次按钮(默认)</Button>\n  <Button type="ghost">幽灵按钮</Button>\n</div>,\nmountNode);\n';
 
 ReactDOM.render(React.createElement(ReactPlayground, { codeText: App }), document.getElementById('example-default'));
