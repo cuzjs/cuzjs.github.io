@@ -205,154 +205,82 @@
 若不设置 <code>type</code>, 则该属性为次按钮.</p>
 
 <div id="example-default"></div>
+
+<script src="/js/components/button/button.js"></script>
 <h2><a class="anchor" name=""></a>尺寸 <a class="hash-link" href="#">#</a></h2>
 <p>按钮有三种尺寸: 大号, 中号和小号. 
 通过设置 <code>size</code> 属性为 <code>large</code> <code>small</code> 可以分别设置为大号按钮或小号按钮,
 若不设置 <code>type</code>, 则该属性为次按钮.</p>
 
 <div id="btn-size"></div>
+
+<script src="/js/components/button/button-sizes.js"></script>
 <h2><a class="anchor" name=""></a>激活状态 <a class="hash-link" href="#">#</a></h2>
 <p>通过设置 <code>active</code> 属性, 可以让按钮处于激活状态.
 该特性通常与 <code>ButtonGroup</code> 配合使用.</p>
 
 <div id="btn-state-active"></div>
+
+<script src="/js/components/button/button-state-active.js"></script>
 <h2><a class="anchor" name=""></a>禁用状态 <a class="hash-link" href="#">#</a></h2>
 <p>通过设置 <code>disabled</code> 属性, 可以让按钮处于禁用状态.
 禁用状态的按钮无法触发点击事件.</p>
 
 <div id="btn-state-disabled"></div>
+
+<script src="/js/components/button/button-state-disabled.js"></script>
 <h2><a class="anchor" name=""></a>按钮组 <a class="hash-link" href="#">#</a></h2>
 <p>将<code>&lt;Button /&gt;</code>放入<code>&lt;ButtonGroup /&gt;</code>中可以实现按钮组.</p>
 
 <div id="btn-groups"></div>
-<h3><a class="anchor" name="props"></a>Props <a class="hash-link" href="#props">#</a></h3><h4><a class="anchor" name="button"></a>Button <a class="hash-link" href="#button">#</a></h4>
-<table><thead>
-<tr>
-<th style="text-align: left">名称</th>
-<th style="text-align: center">类型</th>
-<th style="text-align: right">缺省值</th>
-<th style="text-align: right">描述</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">active</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">block</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">bsClass</td>
-<td style="text-align: center">string</td>
-<td style="text-align: right">&quot;btn&quot;</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">bsSize</td>
-<td style="text-align: center"><code>&quot;small&quot;</code></td>
-<td style="text-align: right"></td>
-<td style="text-align: right">小尺寸的按钮</td>
-</tr>
-<tr>
-<td style="text-align: left">bsStyle</td>
-<td style="text-align: center">以下之一:<code>&quot;default&quot;</code>,<code>&quot;primary&quot;</code>,<code>&quot;link&quot;</code></td>
-<td style="text-align: right">&quot;default&quot;</td>
-<td style="text-align: right">按钮的视觉样式</td>
-</tr>
-<tr>
-<td style="text-align: left">componentClass</td>
-<td style="text-align: center">elementType</td>
-<td style="text-align: right"></td>
-<td style="text-align: right">你可以为用一个自定义的元素替换该属性所属的标签</td>
-</tr>
-<tr>
-<td style="text-align: left">disabled</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">href</td>
-<td style="text-align: center">string</td>
-<td style="text-align: right"></td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">navDropdown</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">navItem</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">target</td>
-<td style="text-align: center">string</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">type</td>
-<td style="text-align: center">以下之一: <code>&quot;button&quot;</code> 、 <code>&quot;reset&quot;</code> 、 <code>&quot;submit&quot;</code></td>
-<td style="text-align: right">&quot;button&quot;</td>
-<td style="text-align: right">定义 button 标签的类型属性 @type{(&quot;button&quot;</td>
-</tr>
-</tbody></table>
-<h4><a class="anchor" name="buttongroup"></a>ButtonGroup <a class="hash-link" href="#buttongroup">#</a></h4>
-<table><thead>
-<tr>
-<th style="text-align: left">名称</th>
-<th style="text-align: center">类型</th>
-<th style="text-align: right">缺省值</th>
-<th style="text-align: right">描述</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">block</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right">使按钮门成为块级元素，仅仅当和 &#39;vertical&#39; 一同使用的时候有效。</td>
-</tr>
-<tr>
-<td style="text-align: left">bsClass</td>
-<td style="text-align: center">string</td>
-<td style="text-align: right">&quot;btn-group&quot;</td>
-<td style="text-align: right">基本的CSS类名和前缀组件。一般来说，当体统新的样式给组件时，应该只改变bsClass。</td>
-</tr>
-<tr>
-<td style="text-align: left">justified</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">fasle</td>
-<td style="text-align: right"></td>
-</tr>
-<tr>
-<td style="text-align: left">vertical</td>
-<td style="text-align: center">boolean</td>
-<td style="text-align: right">false</td>
-<td style="text-align: right"></td>
-</tr>
-</tbody></table>
-<h3><a class="anchor" name=""></a>组件参考 <a class="hash-link" href="#">#</a></h3>
-<p>React-Bootstrap 官方文档: <a href="http://react-bootstrap.github.io/components.html#buttons">http://react-bootstrap.github.io/components.html#buttons</a></p>
-
-<script src="/js/components/button/button.js"></script>
-
-<script src="/js/components/button/button-sizes.js"></script>
-
-<script src="/js/components/button/button-state-active.js"></script>
-
-<script src="/js/components/button/button-state-disabled.js"></script>
 
 <script src="/js/components/button/button-groups.js"></script>
+<h2><a class="anchor" name="api"></a>API <a class="hash-link" href="#api">#</a></h2><h3><a class="anchor" name="button"></a>Button <a class="hash-link" href="#button">#</a></h3>
+<table><thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>类型</th>
+<th>默认值</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>类型</td>
+<td><code>[&quot;primary&quot;, &quot;ghost&quot;]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>size</td>
+<td>尺寸</td>
+<td><code>[&quot;small&quot;, &quot;large&quot;]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>禁用</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>active</td>
+<td>激活</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>block</td>
+<td>块级显示</td>
+<td>boolean</td>
+<td>false</td>
+</tr>
+<tr>
+<td>onClick</td>
+<td>点击事件</td>
+<td>function</td>
+<td></td>
+</tr>
+</tbody></table>
 
 
     <div class="docs-prevnext">
