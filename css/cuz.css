@@ -1898,7 +1898,8 @@ input[type="search"] {
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
-    cursor: pointer; }
+    cursor: pointer;
+    padding-top: 2px; }
 
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
