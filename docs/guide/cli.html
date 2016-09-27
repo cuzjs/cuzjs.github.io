@@ -104,7 +104,7 @@
           </li>
         
           <li>
-            <a href="/docs/guide/config.html">配置文件</a>
+            <a href="/docs/guide/config.html">参数配置</a>
             
           </li>
         
@@ -112,7 +112,66 @@
     </div>
   
     <div class="nav-docs-section">
-      <h3>未来规划</h3>
+      <h3>JavaScript</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/guide/js-redux.html">状态管理</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/js-immutable.html">不可变数据</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/js-reselect.html">衍生数据缓存</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/js-redux-saga.html">获取远程数据</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/js-router.html">路由管理</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>css</h3>
+      <ul>
+        
+          <li>
+            <a href="/docs/guide/css-postcss.html">PostCSS</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/css-cssmodules.html">模块化</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/css-sanitize.html">重置样式</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/guide/css-stylelint.html">代码样式检查</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <h3>线路图</h3>
       <ul>
         
           <li>
@@ -149,41 +208,37 @@
     </h1>
     <div class="subHeader"></div>
 
-    <p>cuz-cli 是 cuz 的命令行接口工具, 基于 NodeJS 实现, 用于对项目进行调试和发布.</p>
-<h2><a class="anchor" name=""></a>特性 <a class="hash-link" href="#">#</a></h2>
-<ul>
-<li>支持 ES6 &amp; ES7</li>
-<li>支持 LESS &amp; SASS</li>
-<li>集成 ESLint 语法检查</li>
-<li>集成 Mocha &amp; Chai 单元测试套件</li>
-<li>支持调试时指定不同的环境变量</li>
-<li>支持静态资源文件的打包</li>
-<li>支持配置基于 CDN 的发布路径</li>
-</ul>
-<h2><a class="anchor" name=""></a>使用说明 <a class="hash-link" href="#">#</a></h2><h3><a class="anchor" name=""></a>安装 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install cuz-cli -g
-</code></pre></div><h3><a class="anchor" name=""></a>使用 <a class="hash-link" href="#">#</a></h3><h4><a class="anchor" name="1-"></a>1) 初始化项目 <a class="hash-link" href="#1-">#</a></h4>
+    <p>cuz-cli 是 cuz 的命令行接口工具, 基于 NodeJS 实现, 可用于对项目进行调试和构建.</p>
+<h2><a class="anchor" name=""></a>安装 <a class="hash-link" href="#">#</a></h2>
+<p>CLI 需要以全局的方式安装, 便您能在任意目录调用 cuz 相关命令.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install cuz-cli -g
+</code></pre></div><h2><a class="anchor" name=""></a>使用 <a class="hash-link" href="#">#</a></h2><h3><a class="anchor" name=""></a>初始化项目 <a class="hash-link" href="#">#</a></h3>
 <p>初始化命令可以生成一个标准模版项目, 您可以直接模版上进行后续开发.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz init
 </code></pre></div>
 <blockquote>
 <p>Note:</p>
 
-<p>需要运行 cuz init 后才可使用下面的命令.</p>
+<p>cuz init 是一个初始化命令, 以下命令需要您运行 cuz init 之后才可使用.</p>
 </blockquote>
-<h4><a class="anchor" name="2-"></a>2) 本地调试 <a class="hash-link" href="#2-">#</a></h4>
-<p>本地调试命令将启动一个 <code>localhost</code> 的 Web 环境供浏览器直接访问, 默认端口号为 <code>5000</code>, 您也可以在 <a href="/docs/guide/config.html">配置文件</a> 中修改它以避免冲突.</p>
+<h3><a class="anchor" name=""></a>调试 <a class="hash-link" href="#">#</a></h3>
+<p>调试命令将启动一个 <code>localhost</code> 的 Web 环境供浏览器直接访问, 默认端口号为 <code>5000</code>, 您也可以在 <a href="/docs/guide/config.html">配置文件</a> 中修改它以避免冲突.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz dev
 </code></pre></div>
-<p><strong>指定环境变量</strong></p>
+<p><strong>*指定环境变量</strong></p>
 
-<p>在默认情况下, 
-本地调试环境变量为 <code>development</code>, 
+<p>在默认情况下,
+本地调试环境变量为 <code>development</code>,
 不过 <code>cuz-cli</code> 也支持您显示声明调试的环境变量:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz dev -e production
-</code></pre></div><h4><a class="anchor" name="3-"></a>3) 测试 <a class="hash-link" href="#3-">#</a></h4>
+</code></pre></div>
+<p><strong>*别名</strong></p>
+
+<p>您可以直接使用简化的 <code>cuz</code> 来调用 <code>cuz dev</code>.</p>
+<h3><a class="anchor" name=""></a>测试 <a class="hash-link" href="#">#</a></h3>
 <p>运行测试命令将遍历并运行 <code>/test</code> 目录下所有单元测试.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz test
-</code></pre></div><h4><a class="anchor" name="4-"></a>4) 构建 <a class="hash-link" href="#4-">#</a></h4>
+</code></pre></div><h3><a class="anchor" name=""></a>构建 <a class="hash-link" href="#">#</a></h3>
 <p>构建命令将自动打包项目中使用到的所有文件, 并输出到 <code>/build</code> 目录中.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">$ cuz build
 </code></pre></div>

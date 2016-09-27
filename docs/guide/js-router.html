@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>编译源码 | cuz</title>
+  <title>路由管理 | cuz</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="shortcut icon" href="/logo.png">
@@ -136,7 +136,7 @@
           </li>
         
           <li>
-            <a href="/docs/guide/js-router.html">路由管理</a>
+            <a href="/docs/guide/js-router.html" class="active">路由管理</a>
             
           </li>
         
@@ -187,7 +187,7 @@
       <ul>
         
           <li>
-            <a href="/docs/guide/compile-source.html" class="active">编译源码</a>
+            <a href="/docs/guide/compile-source.html">编译源码</a>
             
           </li>
         
@@ -204,41 +204,24 @@
 
   <div class="inner-content">
     <h1>
-      编译源码
+      路由管理
     </h1>
     <div class="subHeader"></div>
 
-    <h2><a class="anchor" name=""></a>源码编译 <a class="hash-link" href="#">#</a></h2>
-<hr>
+    <h2><a class="anchor" name="react-router-amp-react-router-redux"></a>react-router &amp; react-router-redux <a class="hash-link" href="#react-router-amp-react-router-redux">#</a></h2>
+<p><code>react-router</code> 是 react 应用的标准路由解决方案. 唯一的问题是, URL 应该是应用程序状态的一部分.
+因此我们引入了 <code>react-router-redux</code> 来将路由状态同步到 state 中.</p>
+<h2><a class="anchor" name=""></a>使用 <a class="hash-link" href="#">#</a></h2><h3><a class="anchor" name=""></a>新增路由 <a class="hash-link" href="#">#</a></h3>
+<p>添加一个新的路由, 你可以直接在 <code>app/routes.js</code> 中添加一行, 如下.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;Route component={App}&gt;
+  &lt;Route path=&quot;/&quot; component={Home} /&gt;
+  &lt;Route path=&quot;/new-route&quot; component={PageDemo} /&gt;
+&lt;/Route&gt;
+</code></pre></div><h3><a class="anchor" name=""></a>路由跳转 <a class="hash-link" href="#">#</a></h3>
+<p>你可以直接使用 <code>push</code> 方法进行页面间的跳转以及传参.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">import { push } from &#39;react-router-redux&#39;;
 
-<p>编译源码你需要以下环境:</p>
-
-<ul>
-<li><a href="https://www.ruby-lang.org/en/">Ruby</a> (version &gt;= 1.8.7)</li>
-<li><a href="https://www.python.org/">Python</a> (version &gt;= 2.7)</li>
-</ul>
-
-<p>环境配置完成后即可下载源码进行编译:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">### 下载源码
-$ git clone https://github.com/cuzjs/cuz.git &amp;&amp; cd cuz
-
-### 安装依赖
-$ sudo npm install
-
-### 编译
-$ make
-</code></pre></div><h2><a class="anchor" name=""></a>文档站点编译 <a class="hash-link" href="#">#</a></h2>
-<hr>
-<h3><a class="anchor" name=""></a>生成 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ cd docs
-$ gem update --system
-$ gem install bundler
-$ bundle install
-$ bundle exec rake release
-</code></pre></div><h3><a class="anchor" name=""></a>编写 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ bundle exec rake watch
-$ bundle exec jekyll serve -w
-$ open http://localhost:4000
+this.props.push(&#39;/new-route&#39;);
 </code></pre></div>
 
     <div class="docs-prevnext">

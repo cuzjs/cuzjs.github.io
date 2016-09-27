@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>编译源码 | cuz</title>
+  <title>代码样式检查 | cuz</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="shortcut icon" href="/logo.png">
@@ -163,7 +163,7 @@
           </li>
         
           <li>
-            <a href="/docs/guide/css-stylelint.html">代码样式检查</a>
+            <a href="/docs/guide/css-stylelint.html" class="active">代码样式检查</a>
             
           </li>
         
@@ -187,7 +187,7 @@
       <ul>
         
           <li>
-            <a href="/docs/guide/compile-source.html" class="active">编译源码</a>
+            <a href="/docs/guide/compile-source.html">编译源码</a>
             
           </li>
         
@@ -204,42 +204,17 @@
 
   <div class="inner-content">
     <h1>
-      编译源码
+      代码样式检查
     </h1>
     <div class="subHeader"></div>
 
-    <h2><a class="anchor" name=""></a>源码编译 <a class="hash-link" href="#">#</a></h2>
-<hr>
+    <p>一个代码校验工具可以帮助我们避免愚蠢的错误, 使团队保持一致的代码风格.
+cuz 采用 <code>stylelint</code> 来对 css 进行代码校验和风格检查.</p>
+<h2><a class="anchor" name="stylelint"></a>stylelint <a class="hash-link" href="#stylelint">#</a></h2>
+<p>cuz 默认采用 <a href="https://github.com/stylelint/stylelint-config-standard">stylelint-config-standard</a> 作为 <code>stylelint</code> 的代码风格配置.</p>
 
-<p>编译源码你需要以下环境:</p>
+<p>请查看<a href="http://stylelint.io">官方文档</a>以了解更多.</p>
 
-<ul>
-<li><a href="https://www.ruby-lang.org/en/">Ruby</a> (version &gt;= 1.8.7)</li>
-<li><a href="https://www.python.org/">Python</a> (version &gt;= 2.7)</li>
-</ul>
-
-<p>环境配置完成后即可下载源码进行编译:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">### 下载源码
-$ git clone https://github.com/cuzjs/cuz.git &amp;&amp; cd cuz
-
-### 安装依赖
-$ sudo npm install
-
-### 编译
-$ make
-</code></pre></div><h2><a class="anchor" name=""></a>文档站点编译 <a class="hash-link" href="#">#</a></h2>
-<hr>
-<h3><a class="anchor" name=""></a>生成 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ cd docs
-$ gem update --system
-$ gem install bundler
-$ bundle install
-$ bundle exec rake release
-</code></pre></div><h3><a class="anchor" name=""></a>编写 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ bundle exec rake watch
-$ bundle exec jekyll serve -w
-$ open http://localhost:4000
-</code></pre></div>
 
     <div class="docs-prevnext">
       

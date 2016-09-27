@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>编译源码 | cuz</title>
+  <title>模块化 | cuz</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="shortcut icon" href="/logo.png">
@@ -153,7 +153,7 @@
           </li>
         
           <li>
-            <a href="/docs/guide/css-cssmodules.html">模块化</a>
+            <a href="/docs/guide/css-cssmodules.html" class="active">模块化</a>
             
           </li>
         
@@ -187,7 +187,7 @@
       <ul>
         
           <li>
-            <a href="/docs/guide/compile-source.html" class="active">编译源码</a>
+            <a href="/docs/guide/compile-source.html">编译源码</a>
             
           </li>
         
@@ -204,41 +204,36 @@
 
   <div class="inner-content">
     <h1>
-      编译源码
+      模块化
     </h1>
     <div class="subHeader"></div>
 
-    <h2><a class="anchor" name=""></a>源码编译 <a class="hash-link" href="#">#</a></h2>
-<hr>
+    <p>cuz 使用 <code>CSS Modules</code> 实现 css 的模块化编写.</p>
+<h2><a class="anchor" name="css-modules"></a>css-modules <a class="hash-link" href="#css-modules">#</a></h2>
+<p>使用 <code>CSS Modules</code>, 所有样式将默认只能在当前 import 的 js 文件作用域中生效.
+这意味着不会再发生命名冲突或者样式覆盖等问题.
+<code>CSS Modules</code> 同样支持继承 class 的能力, 以实现 css 的可复用性.</p>
 
-<p>编译源码你需要以下环境:</p>
+<p>请查看<a href="https://github.com/css-modules/css-modules">官方文档</a>以了解更多.</p>
+<h2><a class="anchor" name=""></a>使用 <a class="hash-link" href="#">#</a></h2>
+<p>创建 <code>styles.css</code> 文件, 并以正常方式编写 styles.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">/* styles.css */
 
-<ul>
-<li><a href="https://www.ruby-lang.org/en/">Ruby</a> (version &gt;= 1.8.7)</li>
-<li><a href="https://www.python.org/">Python</a> (version &gt;= 2.7)</li>
-</ul>
+.saveBtn {
+  composes: btn from &#39;../components/btn&#39;;
+  color: white;
+}
+</code></pre></div>
+<p>在 js component 中导入该 CSS 文件, 然后在 JSX 中引用该 class 名字.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">import styles from &#39;./styles.css&#39;;
 
-<p>环境配置完成后即可下载源码进行编译:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">### 下载源码
-$ git clone https://github.com/cuzjs/cuz.git &amp;&amp; cd cuz
+// ...
 
-### 安装依赖
-$ sudo npm install
-
-### 编译
-$ make
-</code></pre></div><h2><a class="anchor" name=""></a>文档站点编译 <a class="hash-link" href="#">#</a></h2>
-<hr>
-<h3><a class="anchor" name=""></a>生成 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ gem sources --remove https://rubygems.org/
-$ gem sources -a https://ruby.taobao.org/
-$ cd docs
-$ gem update --system
-$ gem install bundler
-$ bundle install
-$ bundle exec rake release
-</code></pre></div><h3><a class="anchor" name=""></a>编写 <a class="hash-link" href="#">#</a></h3><div class="highlight"><pre><code class="language-text" data-lang="text">$ bundle exec rake watch
-$ bundle exec jekyll serve -w
-$ open http://localhost:4000
+return (
+  &lt;button className={ styles.saveBtn }&gt;
+    Save
+  &lt;/button&gt;
+);
 </code></pre></div>
 
     <div class="docs-prevnext">
